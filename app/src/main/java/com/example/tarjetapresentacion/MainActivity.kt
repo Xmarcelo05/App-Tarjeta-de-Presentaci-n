@@ -20,8 +20,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.tarjetapresentacion.ui.theme.TarjetaPresentacionTheme
 
 class MainActivity : ComponentActivity() {
@@ -54,21 +57,38 @@ fun TarjetaPresentacion() {
         ) {
             Box(
                 modifier = Modifier
-                    .height(200.dp)
+                    .height(220.dp)
                     .width(300.dp)
-                    .background(Color(0xFF023222))
+                    .background(Color(0xFF9CE9DE))
             ) {
                 Column(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier.fillMaxSize()
+                        .padding(top = 5.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.Center
+                    verticalArrangement = Arrangement.Top
                 ) {
                     Image(
                         painter = painterResource(R.drawable.android_logo),
                         contentDescription = "Logo de Android",
-                        modifier = Modifier.size(150.dp)
+                        modifier = Modifier.size(120.dp).background(Color(0xFF022D36))
                     )
-                    Text(text = "Hello World")
+                    Text(
+                        text = "Marcelo Bravo",
+
+                        fontSize = 40.sp,
+                        color = Color(0xFF022D36),
+                        modifier = Modifier
+                            .padding(top = 5.dp)
+                    )
+                    Text(
+                        text = "Estudiante de 6to semestre de Software",
+
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF008000),
+                        modifier = Modifier
+                            .padding(top = 5.dp)
+                    )
                 }
 
             }
