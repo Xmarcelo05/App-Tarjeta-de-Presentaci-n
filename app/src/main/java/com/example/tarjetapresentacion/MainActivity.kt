@@ -75,7 +75,7 @@ fun TarjetaPresentacion() {
                     verticalArrangement = Arrangement.Top
                 ) {
                     Image(
-                        painter = painterResource(R.drawable.android_logo),
+                        painter = painterResource(R.drawable.foto_cv_comprimida),
                         contentDescription = "Logo de Android",
                         modifier = Modifier
                             .size(120.dp)
